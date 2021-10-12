@@ -1,0 +1,33 @@
+void main() {
+  Apprenant a1 = new Apprenant();
+  a1.nom = 'diallo';
+  a1.prenom = 'amirou';
+  a1.adress = 'thies';
+  print(a1.getInfo());
+}
+class User {
+  String nom = '';
+  String prenom = "";
+  String adress = '';
+  void manger() {
+    print('User mange');
+  }
+}
+
+class Apprenant extends User {
+  void printInfo() {
+    print(super.manger);
+  }
+}
+
+void etudier() {
+  print("j'etudie flutter");
+}
+
+void passerExamen() {
+  print("je passe l'examen de certification");
+}
+
+String getInfo() {
+  return '${this.prenom} ${this.nom} ${this.adress}';
+}
